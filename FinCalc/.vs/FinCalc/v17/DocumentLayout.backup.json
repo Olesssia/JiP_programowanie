@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Yaroslav\\source\\repos\\FinCalc\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D34E10E5-4025-4E5D-8527-6A5879A33E64}|FinCalc.fsproj|c:\\users\\yaroslav\\source\\repos\\fincalc\\program.fs||{8A5AA6CF-46E3-4520-A70A-7393D15233E9}",
+      "RelativeMoniker": "D:0:0:{D34E10E5-4025-4E5D-8527-6A5879A33E64}|FinCalc.fsproj|solutionrelative:program.fs||{8A5AA6CF-46E3-4520-A70A-7393D15233E9}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D34E10E5-4025-4E5D-8527-6A5879A33E64}|FinCalc.fsproj|c:\\users\\yaroslav\\source\\repos\\fincalc\\computingmodule.fs||{8A5AA6CF-46E3-4520-A70A-7393D15233E9}",
+      "RelativeMoniker": "D:0:0:{D34E10E5-4025-4E5D-8527-6A5879A33E64}|FinCalc.fsproj|solutionrelative:computingmodule.fs||{8A5AA6CF-46E3-4520-A70A-7393D15233E9}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "computingModule.fs",
+              "DocumentMoniker": "C:\\Users\\Yaroslav\\source\\repos\\FinCalc\\computingModule.fs",
+              "RelativeDocumentMoniker": "computingModule.fs",
+              "ToolTip": "C:\\Users\\Yaroslav\\source\\repos\\FinCalc\\computingModule.fs",
+              "RelativeToolTip": "computingModule.fs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-02-05T13:51:22.852Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.fs",
+              "DocumentMoniker": "C:\\Users\\Yaroslav\\source\\repos\\FinCalc\\Program.fs",
+              "RelativeDocumentMoniker": "Program.fs",
+              "ToolTip": "C:\\Users\\Yaroslav\\source\\repos\\FinCalc\\Program.fs",
+              "RelativeToolTip": "Program.fs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAB4AAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-02-05T13:15:17.165Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
