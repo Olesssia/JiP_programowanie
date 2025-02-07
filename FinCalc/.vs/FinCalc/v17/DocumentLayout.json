@@ -1,14 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Yaroslav\\source\\repos\\Olesssia\\JiP_programowanie\\FinCalc\\",
+  "WorkspaceRootPath": "C:\\Users\\Yaroslav\\source\\repos\\counter\\JiP_programowanie\\FinCalc\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D34E10E5-4025-4E5D-8527-6A5879A33E64}|FinCalc.fsproj|c:\\users\\yaroslav\\source\\repos\\olesssia\\jip_programowanie\\fincalc\\program.fs||{8A5AA6CF-46E3-4520-A70A-7393D15233E9}",
-      "RelativeMoniker": "D:0:0:{D34E10E5-4025-4E5D-8527-6A5879A33E64}|FinCalc.fsproj|solutionrelative:program.fs||{8A5AA6CF-46E3-4520-A70A-7393D15233E9}"
+      "AbsoluteMoniker": "D:0:0:{D34E10E5-4025-4E5D-8527-6A5879A33E64}|FinCalc.fsproj|c:\\users\\yaroslav\\source\\repos\\counter\\jip_programowanie\\fincalc\\computingmodule.fs||{8A5AA6CF-46E3-4520-A70A-7393D15233E9}",
+      "RelativeMoniker": "D:0:0:{D34E10E5-4025-4E5D-8527-6A5879A33E64}|FinCalc.fsproj|solutionrelative:computingmodule.fs||{8A5AA6CF-46E3-4520-A70A-7393D15233E9}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D34E10E5-4025-4E5D-8527-6A5879A33E64}|FinCalc.fsproj|c:\\users\\yaroslav\\source\\repos\\olesssia\\jip_programowanie\\fincalc\\computingmodule.fs||{8A5AA6CF-46E3-4520-A70A-7393D15233E9}",
-      "RelativeMoniker": "D:0:0:{D34E10E5-4025-4E5D-8527-6A5879A33E64}|FinCalc.fsproj|solutionrelative:computingmodule.fs||{8A5AA6CF-46E3-4520-A70A-7393D15233E9}"
+      "AbsoluteMoniker": "D:0:0:{D34E10E5-4025-4E5D-8527-6A5879A33E64}|FinCalc.fsproj|c:\\users\\yaroslav\\source\\repos\\counter\\jip_programowanie\\fincalc\\program.fs||{8A5AA6CF-46E3-4520-A70A-7393D15233E9}",
+      "RelativeMoniker": "D:0:0:{D34E10E5-4025-4E5D-8527-6A5879A33E64}|FinCalc.fsproj|solutionrelative:program.fs||{8A5AA6CF-46E3-4520-A70A-7393D15233E9}"
     }
   ],
   "DocumentGroupContainers": [
@@ -21,33 +21,30 @@
           "SelectedChildIndex": 1,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Program.fs",
-              "DocumentMoniker": "C:\\Users\\Yaroslav\\source\\repos\\Olesssia\\JiP_programowanie\\FinCalc\\Program.fs",
+              "DocumentMoniker": "C:\\Users\\Yaroslav\\source\\repos\\counter\\JiP_programowanie\\FinCalc\\Program.fs",
               "RelativeDocumentMoniker": "Program.fs",
-              "ToolTip": "C:\\Users\\Yaroslav\\source\\repos\\Olesssia\\JiP_programowanie\\FinCalc\\Program.fs",
+              "ToolTip": "C:\\Users\\Yaroslav\\source\\repos\\counter\\JiP_programowanie\\FinCalc\\Program.fs",
               "RelativeToolTip": "Program.fs",
-              "ViewState": "AgIAAIwAAAAAAAAAAAAQwJMAAAALAAAAAAAAAA==",
+              "ViewState": "AgIAAMAAAAAAAAAAAAAAAMQAAABKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2025-02-06T14:56:36.619Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "computingModule.fs",
-              "DocumentMoniker": "C:\\Users\\Yaroslav\\source\\repos\\Olesssia\\JiP_programowanie\\FinCalc\\computingModule.fs",
+              "DocumentMoniker": "C:\\Users\\Yaroslav\\source\\repos\\counter\\JiP_programowanie\\FinCalc\\computingModule.fs",
               "RelativeDocumentMoniker": "computingModule.fs",
-              "ToolTip": "C:\\Users\\Yaroslav\\source\\repos\\Olesssia\\JiP_programowanie\\FinCalc\\computingModule.fs",
+              "ToolTip": "C:\\Users\\Yaroslav\\source\\repos\\counter\\JiP_programowanie\\FinCalc\\computingModule.fs",
               "RelativeToolTip": "computingModule.fs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAIwBAAAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-02-05T13:51:22.852Z"
+              "WhenOpened": "2025-02-05T13:51:22.852Z",
+              "EditorCaption": ""
             }
           ]
         }

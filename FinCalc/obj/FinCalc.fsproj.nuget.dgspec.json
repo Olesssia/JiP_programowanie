@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Yaroslav\\source\\repos\\Olesssia\\JiP_programowanie\\FinCalc\\FinCalc.fsproj": {}
+    "C:\\Users\\Yaroslav\\source\\repos\\counter\\JiP_programowanie\\FinCalc\\FinCalc.fsproj": {}
   },
   "projects": {
-    "C:\\Users\\Yaroslav\\source\\repos\\Olesssia\\JiP_programowanie\\FinCalc\\FinCalc.fsproj": {
+    "C:\\Users\\Yaroslav\\source\\repos\\counter\\JiP_programowanie\\FinCalc\\FinCalc.fsproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Yaroslav\\source\\repos\\Olesssia\\JiP_programowanie\\FinCalc\\FinCalc.fsproj",
+        "projectUniqueName": "C:\\Users\\Yaroslav\\source\\repos\\counter\\JiP_programowanie\\FinCalc\\FinCalc.fsproj",
         "projectName": "FinCalc",
-        "projectPath": "C:\\Users\\Yaroslav\\source\\repos\\Olesssia\\JiP_programowanie\\FinCalc\\FinCalc.fsproj",
+        "projectPath": "C:\\Users\\Yaroslav\\source\\repos\\counter\\JiP_programowanie\\FinCalc\\FinCalc.fsproj",
         "packagesPath": "C:\\Users\\Yaroslav\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Yaroslav\\source\\repos\\Olesssia\\JiP_programowanie\\FinCalc\\obj\\",
+        "outputPath": "C:\\Users\\Yaroslav\\source\\repos\\counter\\JiP_programowanie\\FinCalc\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

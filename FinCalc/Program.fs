@@ -8,12 +8,13 @@ let rec Menu() =
     printfn "1. Odsetki proste"
     printfn "2. Odsetki składane"
     printfn "3. Raty kredytowe"
-    printfn "4. Wyjście\n"
+    printfn "4. Zysk z lokaty"
+    printfn "0. Wyjście\n"
     printf "Wybierz opcję: "
 
     match Console.ReadLine() with
     | "1" -> 
-        printf "Podaj kapitał początkowy: "
+        printf "\nPodaj kapitał początkowy: "
         let kInput = Console.ReadLine()
         printf "Podaj procent: "
         let pInput = Console.ReadLine()
@@ -21,7 +22,7 @@ let rec Menu() =
         let tInput = Console.ReadLine()
 
         if String.IsNullOrWhiteSpace(kInput) || String.IsNullOrWhiteSpace(pInput) || String.IsNullOrWhiteSpace(tInput) then
-            printfn "\nNie wpowadzono żadnych danych.\n"
+            printfn "\nNie wprowadzono żadnych danych.\n"
             Menu()
         else
             let (successK, k) = Double.TryParse(kInput)
@@ -36,10 +37,10 @@ let rec Menu() =
                 Menu()
             else
                 let result = normalPercent(k, p, t)
-                printfn "Wynik: %s" (String.Format("{0:0.00}", result))
+                printfn "Wynik: %s\n" (String.Format("{0:0.00}", result))
                 Menu()
     | "2" ->
-        printf "Podaj kapitał początkowy: "
+        printf "\nPodaj kapitał początkowy: "
         let kInput = Console.ReadLine()
         printf "Podaj procent: "
         let pInput = Console.ReadLine()
@@ -47,7 +48,7 @@ let rec Menu() =
         let tInput = Console.ReadLine()
 
         if String.IsNullOrWhiteSpace(kInput) || String.IsNullOrWhiteSpace(pInput) || String.IsNullOrWhiteSpace(tInput) then
-            printfn "\nNie wpowadzono żadnych danych.\n"
+            printfn "\nNie wprowadzono żadnych danych.\n"
             Menu()
         else
             let (successK, k) = Double.TryParse(kInput)
@@ -85,7 +86,7 @@ let rec Menu() =
             let nInput = Console.ReadLine()
 
             if String.IsNullOrWhiteSpace(SInput) || String.IsNullOrWhiteSpace(NInput) || String.IsNullOrWhiteSpace(rInput) || String.IsNullOrWhiteSpace(nInput) then
-                printfn "\nNie wpowadzono żadnych danych. Wracam do menu głównego...\n"
+                printfn "\nNie wprowadzono żadnych danych. Wracam do menu głównego...\n"
                 Menu()
             else
                 let (successS, S) = Double.TryParse(SInput)
@@ -116,7 +117,7 @@ let rec Menu() =
             let nInput = Console.ReadLine()
 
             if String.IsNullOrWhiteSpace(NInput) || String.IsNullOrWhiteSpace(rInput) || String.IsNullOrWhiteSpace(kInput) || String.IsNullOrWhiteSpace(nInput) then
-                printfn "\nNie wpowadzono żadnych danych. Wracam do menu głównego...\n"
+                printfn "\nNie wprowadzono żadnych danych. Wracam do menu głównego...\n"
                 Menu()
             else
                 let (successN, N) = Double.TryParse(NInput)
@@ -142,6 +143,69 @@ let rec Menu() =
             printfn "\nNiewłaściwa opcja. Wracam do menu głównego...\n"
             Menu()
     | "4" ->
+        printf "\nWpisz typ zysku z lokaty (nominalny lub realny): "
+        let typZysku = Console.ReadLine()
+
+        match typZysku.ToLower() with
+        | "nominalny" ->
+            printf "\nPodaj kwotę inwestycji: "
+            let kInput = Console.ReadLine()
+            printf "Podaj procent: "
+            let pInput = Console.ReadLine()
+            printf "Podaj okres trwania lokaty: "
+            let cInput = Console.ReadLine()
+            printf "Podaj liczbę okresów kapitalizacji: "
+            let LkInput = Console.ReadLine()
+
+            if String.IsNullOrWhiteSpace(kInput) || String.IsNullOrWhiteSpace(pInput) || String.IsNullOrWhiteSpace(cInput) || String.IsNullOrWhiteSpace(LkInput) then
+                printfn "\nNie wprowadzono żadnych danych.\n"
+                Menu()
+            else
+                let (successK, k) = Double.TryParse(kInput)
+                let (successP, p) = Double.TryParse(pInput)
+                let (successC, c) = Double.TryParse(cInput)
+                let (successLk, Lk) = Double.TryParse(LkInput)
+                if not (successK && successP && successC && successLk) then
+                    printfn "\nNiewłaściwe dane.\n"
+                    Menu()
+                else
+                    let result = LokatyModule.ZyskNormal(k, p, c)
+                    let resultCapitalized = LokatyModule.ZyskNormalCapitalized(k, p, c, Lk)
+                    let resultNetto = LokatyModule.ZyskNormalNetto(LokatyModule.ZyskNormalCapitalized(k, p, c, Lk))
+                    printfn "\nZysk bez uwzględnienia inflacji wynosi %s" (String.Format("{0:0.00}", result))
+                    printfn "Zysk z uwzględnieniem kapitalizacji wynosi %s" (String.Format("{0:0.00}", resultCapitalized))
+                    printfn "Zysk netto wynosi %s\n" (String.Format("{0:0.00}", resultNetto))
+                    Menu()
+        | "realny" ->
+            printf "\nPodaj kwotę inwestycji: "
+            let kInput = Console.ReadLine()
+            printf "Podaj procent: "
+            let pInput = Console.ReadLine()
+            printf "Podaj okres trwania lokaty: "
+            let cInput = Console.ReadLine()
+            printf "Podaj wskaźnik inflacji (procentowo): "
+            let iInput = Console.ReadLine()
+
+            if String.IsNullOrWhiteSpace(kInput) || String.IsNullOrWhiteSpace(pInput) || String.IsNullOrWhiteSpace(cInput) || String.IsNullOrWhiteSpace(iInput) then
+                printfn "\nNie wprowadzono żadnych danych.\n"
+                Menu()
+            else
+                let (successK, k) = Double.TryParse(kInput)
+                let (successP, p) = Double.TryParse(pInput)
+                let (successC, c) = Double.TryParse(cInput)
+                let (successI, i) = Double.TryParse(iInput)
+                if not (successK && successP && successC && successI) then
+                    printfn "\nNiewłaściwe dane.\n"
+                    Menu()
+                else
+                    let result = LokatyModule.ZyskReal(LokatyModule.ZyskNormal(k, p, c) / k, i)
+                    printfn "Zysk realny wynosi %s\n" (String.Format("{0:0.00}", result))
+                    Menu()
+        | _ ->
+            printfn "Niewłaściwa opcja. Wracam do menu głównego...\n"
+            Menu()
+
+    | "0" ->
         printfn "\nProgram się zamkni za 5 sekund."
         Thread.Sleep(5000)
         Environment.Exit(0)
