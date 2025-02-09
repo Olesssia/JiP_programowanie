@@ -9,6 +9,7 @@ let rec Menu() =
     printfn "2. Odsetki składane"
     printfn "3. Raty kredytowe"
     printfn "4. Zysk z lokaty"
+    printfn "5. RRSO"
     printfn "0. Wyjście\n"
     printf "Wybierz opcję: "
 
@@ -58,7 +59,7 @@ let rec Menu() =
             if not (successK && successP && successT) then
                 printfn "\nNiewłaściwe dane.\n"
                 Menu()
-            elif t < 1 then
+            elif t <= 1 then
                 printfn "\nCzas lokaty musi być większy od 1.\nDla lokat mniejszych niż 1 rok należy obliczać odsetki proste.\n" |> ignore
                 Menu()
             else
@@ -204,7 +205,31 @@ let rec Menu() =
         | _ ->
             printfn "Niewłaściwa opcja. Wracam do menu głównego...\n"
             Menu()
+    | "5" ->
+        printf "\nPodaj całkowity koszt kredytu: "
+        let ckInput = Console.ReadLine()
+        printf "Podaj kwotę kredytu: "
+        let kInput = Console.ReadLine()
+        printf "Podaj liczbę dni spłaty: "
+        let dInput = Console.ReadLine()
 
+        if String.IsNullOrWhiteSpace(ckInput) || String.IsNullOrWhiteSpace(kInput) || String.IsNullOrWhiteSpace(dInput) then
+            printfn "\nNie wprowadzono żadnych danych.\n"
+            Menu()
+        else
+            let (successCK, ck) = Double.TryParse(ckInput)
+            let (successK, k) = Double.TryParse(kInput)
+            let (successD, d) = Double.TryParse(dInput)
+            if not (successCK && successK && successD) then
+                printfn "\nNiewłaściwe dane.\n"
+                Menu()
+            elif ck <= 0 || k <= 0 || d <= 0 then
+                printfn "\nNiektóre wartości są zerowe lub ujemne, co może doprowadzić do nieprzewidywalnych wyników. Spróbuj ponownie.\n"
+                Menu()
+            else
+                let result = rrso(ck, k, d)
+                printfn "RRSO wynosi %.2f procent\n" result
+                Menu()
     | "0" ->
         printfn "\nProgram się zamkni za 5 sekund."
         Thread.Sleep(5000)

@@ -41,3 +41,7 @@ module LokatyModule =
         let i_proc = i / 100.0
         let o = ((1.0 + Zn) / (1.0 + i_proc)) - 1.0
         o
+
+let rrso (ck: float, k: float, d: float) =
+    let o = (ck / k) * (365.0 / d) * 100.0
+    o
